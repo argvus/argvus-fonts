@@ -1,0 +1,20 @@
+# Maintainer: William C. Canin
+pkgname=argvus-fonts
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Bundled fonts for the ARGVUS desktop (Terminus TTF, Font Awesome 7 Free and IBM Plex Mono)."
+arch=('any')
+url="https://github.com/argvus/argvus-fonts"
+license=('OFL-1.1' 'CC-BY-4.0')
+depends=(
+  'fontconfig'
+)
+makedepends=()
+options=('!debug')
+source=("${pkgname}-${pkgver}.tar.gz")
+sha256sums=("SKIP")
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" PREFIX=/usr install
+}

@@ -1,0 +1,30 @@
+# Licensing
+
+The `argvus-fonts` package bundles third-party fonts, each under its own
+license:
+
+## Terminus Font (OFL-1.1)
+
+TerminusTTF.ttf is Copyright (c) 2006-2020 by Dimitar Toshkov Zhekov,
+licensed under the SIL Open Font License, Version 1.1.
+
+## IBM Plex Mono (OFL-1.1)
+
+IBM Plex Mono is Copyright (c) 2017 IBM Corp.,
+licensed under the SIL Open Font License, Version 1.1.
+See `usr/share/fonts/IBM Plex Mono/OFL.txt` for the full license text.
+
+## Font Awesome 7 Free (CC-BY-4.0)
+
+Font Awesome Free is Copyright (c) Fonticons, Inc. (https://fontawesome.com),
+licensed under the Creative Commons Attribution 4.0 International license.
+Icons are CC BY 4.0; the font files are also made available under the
+Font Awesome Free License which permits free commercial and personal use.
+
+The full OFL-1.1 text is available at:
+
+  https://openfontlicense.org/open-font-license-official-text/
+
+The full CC-BY-4.0 text is available at:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode
