@@ -22,20 +22,26 @@ install:
 	@if [ -z "$(DESTDIR)" ] && command -v fc-cache >/dev/null 2>&1; then fc-cache -f "$(PREFIX)/share/fonts" || true; fi
 
 uninstall:
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/TerminusTTF
 	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Font\ Awesome\ 7\ Free
 	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/IBM\ Plex\ Mono
+	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Bitstream\ Vera\ Sans\ Mono
+	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Symbols\ Nerd\ Font
+	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Terminess\ Nerd\ Font
 	$(RM) "$(DESTDIR)$(PREFIX)/share/licenses/argvus-fonts/LICENSE"
 	@if [ -z "$(DESTDIR)" ] && command -v fc-cache >/dev/null 2>&1; then fc-cache -f "$(PREFIX)/share/fonts" || true; fi
 
 validate:
 	@set -eu
-	test -d usr/share/fonts/TerminusTTF
 	test -d "usr/share/fonts/Font Awesome 7 Free"
 	test -d "usr/share/fonts/IBM Plex Mono"
-	test -f usr/share/fonts/TerminusTTF/TerminusTTF.ttf
+	test -d "usr/share/fonts/Bitstream Vera Sans Mono"
+	test -d "usr/share/fonts/Symbols Nerd Font"
+	test -d "usr/share/fonts/Terminess Nerd Font"
 	test -f "usr/share/fonts/Font Awesome 7 Free/Font Awesome 7 Free-Regular-400.otf"
 	test -f "usr/share/fonts/IBM Plex Mono/IBMPlexMono-Regular.ttf"
+	test -f "usr/share/fonts/Bitstream Vera Sans Mono/BitstromWeraNerdFont-Regular.ttf"
+	test -f "usr/share/fonts/Symbols Nerd Font/SymbolsNerdFont-Regular.ttf"
+	test -f "usr/share/fonts/Terminess Nerd Font/TerminessNerdFont-Regular.ttf"
 	@echo "argvus-fonts validation ok"
 
 build:

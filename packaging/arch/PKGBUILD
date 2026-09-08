@@ -2,10 +2,10 @@
 pkgname=argvus-fonts
 pkgver=0.1.0
 pkgrel=1
-pkgdesc="Bundled fonts for the ARGVUS desktop (Terminus TTF, Font Awesome 7 Free and IBM Plex Mono)."
+pkgdesc="Bundled fonts for the ARGVUS desktop (Bitstream Vera Sans Mono, Font Awesome 7 Free, IBM Plex Mono, Symbols Nerd Font and Terminess Nerd Font)."
 arch=('any')
 url="https://github.com/argvus/argvus-fonts"
-license=('OFL-1.1' 'CC-BY-4.0')
+license=('OFL-1.1' 'CC-BY-4.0' 'MIT')
 depends=(
   'fontconfig'
 )
