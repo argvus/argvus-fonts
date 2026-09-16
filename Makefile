@@ -1,53 +1,53 @@
-PREFIX ?= /usr
-DESTDIR ?=
-INSTALL ?= install
-RM ?= rm -f
+.PHONY: help build package install install-package clean validate lint spellcheck changelog
 
 .DEFAULT_GOAL := help
 
-.PHONY: help install uninstall validate build clean
-
 help:
 	@echo "Available targets:"
-	@echo "  make build"
-	@echo "  make install"
-	@echo "  make uninstall"
-	@echo "  make validate"
-
-install:
-	$(INSTALL) -dm755 "$(DESTDIR)$(PREFIX)/share/fonts"
-	cp -R --no-preserve=ownership src/usr/share/fonts/. "$(DESTDIR)$(PREFIX)/share/fonts/"
-	$(INSTALL) -Dm644 LICENSE \
-		"$(DESTDIR)$(PREFIX)/share/licenses/argvus-fonts/LICENSE"
-	@if [ -z "$(DESTDIR)" ] && command -v fc-cache >/dev/null 2>&1; then fc-cache -f "$(PREFIX)/share/fonts" || true; fi
-
-uninstall:
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Font\ Awesome\ 7\ Free
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/IBM\ Plex\ Mono
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Bitstream\ Vera\ Sans\ Mono
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Symbols\ Nerd\ Font
-	rm -rf "$(DESTDIR)$(PREFIX)/share/fonts"/Terminess\ Nerd\ Font
-	$(RM) "$(DESTDIR)$(PREFIX)/share/licenses/argvus-fonts/LICENSE"
-	@if [ -z "$(DESTDIR)" ] && command -v fc-cache >/dev/null 2>&1; then fc-cache -f "$(PREFIX)/share/fonts" || true; fi
-	@if [ -z "$(DESTDIR)" ] && command -v fc-cache >/dev/null 2>&1; then fc-cache -f "$(PREFIX)/share/fonts" || true; fi
-
-validate:
-	@set -eu
-	test -d "src/usr/share/fonts/Font Awesome 7 Free"
-	test -d "src/usr/share/fonts/IBM Plex Mono"
-	test -d "src/usr/share/fonts/Bitstream Vera Sans Mono"
-	test -d "src/usr/share/fonts/Symbols Nerd Font"
-	test -d "src/usr/share/fonts/Terminess Nerd Font"
-	test -f "src/usr/share/fonts/Font Awesome 7 Free/Font Awesome 7 Free-Regular-400.otf"
-	test -f "src/usr/share/fonts/IBM Plex Mono/IBMPlexMono-Regular.ttf"
-	test -f "src/usr/share/fonts/Bitstream Vera Sans Mono/BitstromWeraNerdFont-Regular.ttf"
-	test -f "src/usr/share/fonts/Symbols Nerd Font/SymbolsNerdFont-Regular.ttf"
-	test -f "src/usr/share/fonts/Terminess Nerd Font/TerminessNerdFont-Regular.ttf"
-	@echo "argvus-fonts validation ok"
+	@echo "  make build           - build the package into build/"
+	@echo "  make package         - alias for make build"
+	@echo "  make install         - install the single local package (sudo pacman -U)"
+	@echo "  make clean           - remove build/ outputs"
+	@echo "  make validate        - run required repository and PKGBUILD checks"
+	@echo "  make lint            - run local static checks"
+	@echo "  make spellcheck      - run cspell (if installed)"
+	@echo "  make changelog       - regenerate CHANGELOG.md with git-cliff"
 
 build:
-	@tools/build-local-package.sh
+	@tools/sh/pkgbuild_local.sh
+
+package: build
+
+install:
+	@set -e; \
+	package="$$(find build/dist -maxdepth 1 -type f -name '*.pkg.tar.zst' -print | sort | head -n 1)"; \
+	count="$$(find build/dist -maxdepth 1 -type f -name '*.pkg.tar.zst' -print | wc -l)"; \
+	if [ "$$count" -ne 1 ] || [ -z "$$package" ]; then \
+		echo "Expected exactly one package in build/dist; run 'make clean && make build'." >&2; \
+		exit 1; \
+	fi; \
+	sudo pacman -U "$$package"
+
+install-package: install
+
+validate:
+	@tools/sh/validate.sh
+
+lint:
+	@shellcheck tools/sh/*.sh packaging/arch/common/*.sh src/usr/bin/argvus-hello
+	@bash -n tools/sh/*.sh packaging/arch/common/*.sh src/usr/bin/argvus-hello
+	@git diff --check
+	@echo "Lint OK"
+
+spellcheck:
+	@if command -v cspell >/dev/null 2>&1; then \
+		cspell --config cspell.json .; \
+	else \
+		echo "cspell is not installed; skipping (CI runs it)." >&2; \
+	fi
+
+changelog:
+	@git-cliff -o CHANGELOG.md
 
 clean:
-	rm -rf dist
-	rm -f packaging/arch/*.zst packaging/arch/*.tar.gz
+	rm -rf -- build/

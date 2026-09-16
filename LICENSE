@@ -8,27 +8,27 @@ license:
 The patched Nerd Font "BitstromWera" is based on Bitstream Vera Sans Mono
 which is Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved,
 licensed under the Bitstream Vera License.
-See `usr/share/fonts/Bitstream Vera Sans Mono/Bitstream Vera License.txt` for
+See `src/usr/share/fonts/Bitstream Vera Sans Mono/Bitstream Vera License.txt` for
 the full license text.
 
 ## Symbols Nerd Font (MIT)
 
 Symbols Nerd Font is Copyright (c) 2014 Ryan L McIntyre,
 licensed under the MIT License.
-See `usr/share/fonts/Symbols Nerd Font/LICENSE` for the full license text.
+See `src/usr/share/fonts/Symbols Nerd Font/LICENSE` for the full license text.
 
 ## Terminess Nerd Font (OFL-1.1)
 
 Terminess Nerd Font is Copyright (c) 2010 by Dimitar Toshkov Zhekov and
 Copyright (c) 2011-2021 by Tilman Blumenbach,
 licensed under the SIL Open Font License, Version 1.1.
-See `usr/share/fonts/Terminess Nerd Font/LICENSE.txt` for the full license text.
+See `src/usr/share/fonts/Terminess Nerd Font/LICENSE.txt` for the full license text.
 
 ## IBM Plex Mono (OFL-1.1)
 
 IBM Plex Mono is Copyright (c) 2017 IBM Corp.,
 licensed under the SIL Open Font License, Version 1.1.
-See `usr/share/fonts/IBM Plex Mono/OFL.txt` for the full license text.
+See `src/usr/share/fonts/IBM Plex Mono/OFL.txt` for the full license text.
 
 ## Font Awesome 7 Free (CC-BY-4.0)
 

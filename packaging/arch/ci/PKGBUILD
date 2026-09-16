@@ -1,0 +1,30 @@
+# Maintainer: William C. Canin
+pkgname=argvus-fonts
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Bundled fonts for the ARGVUS desktop"
+arch=('any')
+url="https://github.com/argvus/argvus-fonts"
+license=('OFL-1.1' 'CC-BY-4.0' 'MIT')
+depends=('fontconfig')
+options=('!debug')
+source=(
+  "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz"
+)
+sha256sums=()
+
+# shellcheck disable=SC1091
+_functions_file="${startdir:-$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)}/../common/functions.sh"
+. "$_functions_file"
+
+prepare() {
+  arch_normalize_source_tree
+}
+
+check() {
+  arch_check_fonts
+}
+
+package() {
+  arch_package_fonts
+}
