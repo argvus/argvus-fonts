@@ -1,39 +1,39 @@
 ---
 title: ARGVUS Fonts
-description: Typography system and fonts for ARGVUS desktop
+description: Font families installed by argvus-fonts and where the desktop chooses them.
 ---
 
 # ARGVUS Fonts
 
-ARGVUS includes a curated selection of fonts optimized for readability and visual consistency across the desktop. The typography system is designed to work seamlessly with the ARGVUS interface.
+`argvus-fonts` installs the bundled font families under `/usr/share/fonts/`. It does not
+choose a font by itself: the choice is stored in the ARGVUS configuration and applied to
+each surface by the component that owns it.
 
-## Included Fonts
+## Installed families
 
-The ARGVUS Fonts package includes:
-- **Inter** - Modern sans-serif for UI elements
-- **Fira Code** - Monospace font for terminal and code editors
-- **Noto Sans** - Unicode-rich sans-serif for international text
-- Additional system fonts for compatibility
+| Family | Files | Used for |
+| --- | --- | --- |
+| IBM Plex Mono | Regular, Italic, weights Thin to Bold | Default family for the desktop and the monospace targets |
+| Bitstream Vera Sans Mono | Monospace face | Available as a monospace family |
+| Terminess Nerd Font | Mono, Propo and regular faces with Nerd glyphs | Available as a monospace or proportional family |
+| Symbols Nerd Font | Icon glyphs | Available as an icon family |
+| Font Awesome 7 Free | Brands, Regular and Solid | Available as an icon family |
 
-## Installation
+Each family ships its license (`LICENSE.txt` or `OFL.txt`) next to the font files.
 
-Fonts are installed as part of ARGVUS or separately:
+## Where the font is chosen
 
-```bash
-pacman -S argvus-fonts
-```
+Font preferences are canonical settings in `config.json`:
 
-## Configuration
+- `fonts.targets.<target>` holds the family, style and size of each surface (taskbar,
+  telemetry, Control Panel, system, applications, terminal and browser).
+- `fonts.rendering` holds antialiasing, hinting, subpixel order and DPI.
 
-Configure fonts through:
-- ARGVUS Control Center → Fonts
-- Individual application preferences
-- GTK/Qt configuration files
+Change them in the Control Center (Appearance > Fonts). The sizes are not fixed by this
+package: the value shown in the Control Center is the one in effect. Do not edit the
+generated files under `data/generated/`; they are rewritten from `config.json`.
 
-## Font Specifications
+## Related pages
 
-- **UI Font**: Inter 10pt
-- **Terminal Font**: Fira Code 10pt
-- **System Font**: Noto Sans 11pt
-
-For custom font configurations, edit your relevant configuration files (`.config/gtk-3.0/settings.ini`, etc.)
+- [Appearance and themes](/docs/user-guide/appearance/) for the theme that accompanies a font.
+- [Configuration files](/docs/reference/configuration-files/) for the canonical settings.
