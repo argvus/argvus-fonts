@@ -1,6 +1,6 @@
 # Maintainer: William C. Canin
 pkgname=argvus-fonts
-pkgver=0.1.0
+pkgver=0.0.0
 pkgrel=1
 pkgdesc="Bundled fonts for the ARGVUS desktop"
 arch=('any')
