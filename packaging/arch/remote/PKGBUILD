@@ -8,6 +8,7 @@ url="https://github.com/argvus/argvus-fonts"
 license=('OFL-1.1' 'CC-BY-4.0' 'MIT')
 depends=(
 	'noto-fonts'
+	'noto-fonts-cjk'
 	'noto-fonts-emoji'
 	'ttf-jetbrains-mono-nerd'
 	'ttf-nerd-fonts-symbols-mono'

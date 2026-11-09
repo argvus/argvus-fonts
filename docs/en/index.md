@@ -37,3 +37,7 @@ generated files under `data/generated/`; they are rewritten from `config.json`.
 
 - [Appearance and themes](/docs/user-guide/appearance/) for the theme that accompanies a font.
 - [Configuration files](/docs/reference/configuration-files/) for the canonical settings.
+
+## Multilingual fallback
+
+The package requires `noto-fonts-cjk`, providing Chinese, Japanese and Korean glyphs, alongside `noto-fonts` and `noto-fonts-emoji`. Fontconfig selects fallback glyphs for the active language; user-selected primary families remain in effect. Terminal applications require a Unicode-capable terminal with font fallback. Verify with `fc-match "monospace:lang=ja:charset=65e5"` or `fc-match "monospace:lang=ko:charset=d55c"`. Fonts provide rendering, not an input method.

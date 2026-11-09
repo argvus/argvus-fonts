@@ -37,3 +37,7 @@ pacote: vale o valor mostrado no Control Center. Não edite os arquivos gerados 
 
 - [Aparência e temas](/docs/user-guide/appearance/) para o tema que acompanha uma fonte.
 - [Arquivos de configuração](/docs/reference/configuration-files/) para as configurações canônicas.
+
+## Fallback multilíngue
+
+O pacote depende de `noto-fonts-cjk` para caracteres chineses, japoneses e coreanos, além de `noto-fonts` e `noto-fonts-emoji`. O Fontconfig seleciona glifos de fallback conforme o idioma, preservando a família principal do usuário. TUIs exigem terminal Unicode com fallback de fontes. Verifique com `fc-match "monospace:lang=ja:charset=65e5"` ou `fc-match "monospace:lang=ko:charset=d55c"`. Fontes fornecem renderização, não um método de entrada.
