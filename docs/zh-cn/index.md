@@ -30,8 +30,8 @@ description: 由 argvus-fonts 安装的字体系列以及桌面选择它们的�
 
 ## 相关页面
 
-- [外观和主题](/docs/user-guide/appearance/)] 了解随字体附带的主题。
-- [配置文件](/docs/reference/configuration-files/)] 了解规范设置。
+- [外观和主题](/docs/user-guide/appearance/) 了解随字体附带的主题。
+- [配置文件](/docs/reference/configuration-files/) 了解规范设置。
 
 ## 多语言回退
 

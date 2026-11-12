@@ -1,9 +1,9 @@
 ---
-title: ARGVUS Fonts
+title: Fontes ARGVUS
 description: Famílias de fonte instaladas pelo argvus-fonts e onde o desktop as escolhe.
 ---
 
-# ARGVUS Fonts
+# ARGVUS Fontes
 
 O `argvus-fonts` instala as famílias de fonte incluídas em `/usr/share/fonts/`. Ele não
 escolhe uma fonte sozinho: a escolha fica na configuração do ARGVUS e é aplicada em cada

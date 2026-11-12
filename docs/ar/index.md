@@ -1,5 +1,5 @@
 ---
-title: ARGVUS Fonts
+title: الخطوط ARGVUS
 description:  .ﺐﺘﻜﻤﻟﺍ ﺢﻄﺳ ﻪﻴﻓ ﺎﻫﺭﺎﺘﺨﻳ ﻱﺬﻟﺍ ﻥﺎﻜﻤﻟﺍﻭ argvus-fonts ﺔﻄﺳﺍﻮﺑ ﺔﺘﺒﺜﻤﻟﺍ ﻁﻮﻄﺨﻟﺍ ﺕﻼ﻿ﺋﺎﻋ
 ---
 
@@ -11,7 +11,7 @@ description:  .ﺐﺘﻜﻤﻟﺍ ﺢﻄﺳ ﻪﻴﻓ ﺎﻫﺭﺎﺘﺨﻳ ﻱ�
 
 ## ﺔﺘﺒﺜﻤﻟﺍ ﺕﻼ﻿ﺋﺎﻌﻟﺍ
 
-| Family | Files | Used for |
+| عائلة | ملفات | تستخدم ل |
 | --- | --- | --- |
 | ﺔﻓﺎﺴﻤﻟﺍ ﺔﻳﺩﺎﺣﺃ ﻑﺍﺪﻫﻷ﻿ﺍﻭ ﺐﺘﻜﻤﻟﺍ ﺢﻄﺳ ﺓﺰﻬﺟﻷ﻿ ﺔﻴﺿﺍﺮﺘﻓﻻ﻿ﺍ ﺔﻠﺋﺎﻌﻟﺍ | ﻖﻣﺎﻐﻟﺍ ﻰﻟﺇ ًﺍﺪﺟ ﻒ
         | ﺔﻓﺎﺴﻤﻟﺍ ﺔﻳﺩﺎﺣﺃ ﺔﻠﺋﺎﻌﻛ ﺡﺎﺘﻣ | ﺱﺎﺒﺳﻮﻧﻮﻣ ﻂﺧ | ﻮﻧﻮﻣ ﺲﻧﺎﺳ ﺍﺮﻴﻓ ﻢﻳﺮﺘﺴﺘﻴﺑ |
@@ -35,7 +35,7 @@ config.json.  ﻦﻣ ﺎﻬﺘﺑﺎﺘﻛ ﺓﺩﺎﻋﺇ ﻢﺘﻳ ؛`data/gen
 
 ##                                                                  ﺔﻠﺻ ﺕﺍﺫ ﺕﺎﺤﻔﺻ
 
--  for the installed and user paths.(/docs/reference/configuration-files/) for the installed and user paths.
+- للمسارات المثبتة ومسارات المستخدم.(/docs/reference/configuration-files/) للمسارات المثبتة والمستخدمين.
 
 ## ﺕﺎﻐﻠﻟﺍ ﺩﺪﻌﺘﻣ ﻲﻃﺎﻴﺘﺣﻻ﻿ﺍ ﺦﺴﻨﻟﺍ
 

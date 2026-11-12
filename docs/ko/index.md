@@ -30,8 +30,8 @@ description: argvus-fonts에 의해 설치된 글꼴 패밀리와 데스크탑�
 
 ## 관련 페이지
 
-- [글꼴과 함께 제공되는 테마에 대한 모양 및 테마](/docs/user-guide/appearance/)]
-- [표준 설정에 대한 구성 파일](/docs/reference/configuration-files/)]
+- [글꼴과 함께 제공되는 테마에 대한 모양 및 테마](/docs/user-guide/appearance/)
+- [표준 설정에 대한 구성 파일](/docs/reference/configuration-files/)
 
 ## 다국어 대체
 

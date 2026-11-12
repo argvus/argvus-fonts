@@ -29,8 +29,8 @@ description: argvus-fontsによってインストールされたフォントフ�
 
 ## 関連ページ
 
-- フォントに付随するテーマについては [Appearance and themes](/docs/user-guide/appearance/)]
-- 標準設定については [Configuration files](/docs/reference/configuration-files/)]
+- フォントに付随するテーマについては [Appearance and themes](/docs/user-guide/appearance/)
+- 標準設定については [Configuration files](/docs/reference/configuration-files/)
 
 ## 多言語フォールバック
 

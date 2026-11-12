@@ -1,5 +1,5 @@
 ---
-title: ARGVUS Fonts
+title: ARGVUS Yazı Tipleri
 description: Argvus-fonts tarafından yüklenen yazı tipi aileleri ve masaüstünün bunları seçtiği yer.
 ---
 
@@ -11,7 +11,7 @@ her yüzeyi ona sahip olan bileşene göre.
 
 ## Yüklü aileler
 
-| Family | Files | Used for |
+| Aile | Dosyalar | | için kullanılır
 | --- | --- | --- |
 | IBM Plex Mono | Regular, Italic, ağırlıklar İnce'den Kalın'a | Masaüstü ve monospace hedefleri için varsayılan aile |
 | Bitstream Vera Sans Mono | Tek aralıklı yazı tipi | Tek aralıklı bir aile olarak mevcut |

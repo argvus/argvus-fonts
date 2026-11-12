@@ -1,5 +1,5 @@
 ---
-title: ARGVUS Fonts
+title: Phông chữ ARGVUS
 description: Các họ phông chữ được cài đặt bởi argvus-fonts và nơi mà máy tính để bàn chọn chúng.
 ---
 
@@ -11,7 +11,7 @@ từng bề mặt bởi thành phần sở hữu nó.
 
 ## Các họ phông chữ đã được cài đặt
 
-| Family | Files | Used for |
+| Gia Đình | Tập tin | Được sử dụng cho |
 | --- | --- | --- |
 | IBM Plex Mono | Regular, Italic, từ trọng lượng Mảnh đến Đậm | Gia đình mặc định cho máy tính để bàn và các mục tiêu chữ đơn |
 | Bitstream Vera Sans Mono | Kiểu chữ đơn cách | Có sẵn dưới dạng gia đình chữ đơn cách |

@@ -1,5 +1,5 @@
 ---
-title: ARGVUS Fonts
+title: Font ARGVUS
 description: Keluarga font yang diinstal oleh argvus-fonts dan di mana desktop memilihnya.
 ---
 
@@ -11,7 +11,7 @@ setiap permukaan oleh komponen yang memilikinya.
 
 ## Keluarga yang diinstal
 
-| Family | Files | Used for |
+| Keluarga | File | Digunakan untuk |
 | --- | --- | --- |
 | IBM Plex Mono | Reguler, Miring, berat Tipis hingga Tebal | Keluarga default untuk desktop dan target monospace |
 | Bitstream Vera Sans Mono | Huruf monospace | Tersedia sebagai keluarga monospace |
@@ -27,7 +27,7 @@ Preferensi font adalah pengaturan kanonik di `config.json`:
 
 - `fonts.targets.<target>` menyimpan keluarga, gaya, dan ukuran masing-masing permukaan (taskbar,
 telemetri, Panel Kontrol, sistem, aplikasi, terminal dan peramban).
-- `fonts.rendering` holds antialiasing, hinting, subpixel order and DPI.
+- `fonts.rendering` menampung antialiasing, petunjuk, urutan subpiksel, dan DPI.
 
 Ubah mereka di Pusat Kontrol (Tampilan > Font). Ukurannya tidak ditetapkan oleh  ini
 package: nilai yang ditampilkan di Pusat Kontrol adalah yang berlaku. Jangan mengedit
